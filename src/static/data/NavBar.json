@@ -1,0 +1,67 @@
+{
+    "logo": "/static/img/logo.png",
+    "navList": [
+        {
+            "name": "首页",
+            "path": "/"
+        },
+        {
+            "name": "平台",
+            "path": "/",
+            "children": [
+                {
+                    "name": "慕课专业版",
+                    "path": "/"
+                },
+                {
+                    "name": "混合教学版",
+                    "path": "/"
+                },
+                {
+                    "name": "名企商学院",
+                    "path": "/"
+                }
+            ]
+        },
+        {
+            "name": "服务",
+            "path": "/",
+            "children": [
+                {
+                    "name": "制课服务",
+                    "path": "/"
+                },
+                {
+                    "name": "教学运营",
+                    "path": "/"
+                },
+                {
+                    "name": "私有化部署",
+                    "path": "/"
+                }
+            ]
+        },
+        {
+            "name": "解决方案",
+            "path": "/",
+            "children": [
+                {
+                    "name": "创新创业",
+                    "path": "/"
+                },
+                {
+                    "name": "实境编程",
+                    "path": "/"
+                },
+                {
+                    "name": "虚拟现实",
+                    "path": "/"
+                }
+            ]
+        },
+        {
+            "name": "关于我们",
+            "path": "/"
+        }
+    ]
+}
