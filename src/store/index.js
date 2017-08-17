@@ -6,7 +6,7 @@ Vue.use(Vuex)
 
 const state = {
     name: '',
-    avator: '',
+    avator: ''
 }
 
 const getters = {

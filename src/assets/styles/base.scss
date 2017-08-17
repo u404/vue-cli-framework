@@ -93,7 +93,6 @@ sub { bottom: -0.25em; }
     @include text-overflow();
 }
 
-.container {
-    margin: 0 auto;
-    width: 1200px;
+body {
+    font-size: 14px;
 }

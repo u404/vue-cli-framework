@@ -7,7 +7,7 @@
 </template>
 <script>
 
-  import NavBar from './NavBar'
+  import NavBar from './NavBar/Index'
   export default {
     components: {
       NavBar
