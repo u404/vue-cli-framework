@@ -105,5 +105,55 @@ utils.cookieSafe = {
     }
 }
 
+/**
+ * 将search和hash字符串中的参数转化为字典对象，不传参数时，取location中的search和hash
+ */
+utils.urlParam = function(search, hash) {
+    search = search || window.location.search;
+    hash = hash || window.location.hash;
+    var fn = function(str, reg) {
+        if(str) {
+            var data = {};
+            str.replace(reg, function($0, $1, $2, $3){
+                data[$1] = decodeURI($3);
+            });
+            return data;
+        }
+    }
+    return {
+        search: fn(search, /([^?=&]+)(=([^&]*))?/g) || {},
+        hash: fn(hash, /([^#=&]+)(=([^&]*))?/g) || {}
+    }
+}
+
+utils.jsonp = function(url, callback, charset) {
+    var script = document.createElement('script');
+    script.src = url;
+    charset && (script.charset = charset);
+    script.onload = function() {
+        this.onload = this.onerror = null;
+        this.parentNode.removeChild(this);
+        callback && callback(true);
+    }
+    script.onerror = function() {
+        this.onload = this.onerror = null;
+        this.parentNode.removeChild(this);
+        callback && callback(false);
+    }
+    document.head.appendChild(script);
+}
+
+utils.client = {
+    isAndroid: !!navigator.userAgent.match(/android/ig),
+    isIos: !!navigator.userAgent.match(/iphone|ipod/ig),
+    isIpad: !!navigator.userAgent.match(/ipad/ig),
+    isIos9: !!navigator.userAgent.match(/OS 9/ig),
+    isYx: !!navigator.userAgent.match(/MailMaster_Android/i),
+    isNewsapp: !!navigator.userAgent.match(/newsapp/i),
+    isWeixin: (/MicroMessenger/ig).test(navigator.userAgent),
+    isYixin: (/yixin/ig).test(navigator.userAgent),
+    isQQ: (/qq/ig).test(navigator.userAgent),
+}
+
 
 export default utils

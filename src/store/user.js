@@ -1,6 +1,7 @@
 const state = {
+    token: '',
     name: '',
-    avator: '',
+    avatar: ''
 }
 
 const getters = {
@@ -8,11 +9,15 @@ const getters = {
 }
 
 const mutations = {
-
+    update(state, data){
+        state.token = data.token || state.token;
+        state.name = data.name || state.name;
+        state.avatar = data.avatar || state.avatar;
+    },
 }
 
 const actions = {
-
+    
 }
 
 const modules = {
