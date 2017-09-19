@@ -28,6 +28,10 @@ var cnTools = {
             }
         }
         return true;
+    },
+    //获取中英文混合字符的字节数
+    getBytes(str) { 
+        return str.replace(/[^\x00-\xff]/g, '**').length;
     }
 }
 
