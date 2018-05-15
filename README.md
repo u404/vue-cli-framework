@@ -4,22 +4,30 @@
 
 > 本项目基于vue-cli，以webpack为构建工具，过程中参考了一些平时遇到的比较好的设计思想，当然也会不断完善。
 
+> 开发中基本涉及的技术点：vue（基本MVVM框架）、vue-router（路由管理）、vuex（复杂状态管理）、sass（css样式）、axios（ajax），其他模块和库陆续更新....
+
+> 深入构建方面技术点：node、express、webpack系列
+
 > 项目中充分贯彻了组件化开发思想，以组件为基本的开发单位，资源的组织围绕组件进行。
+
 
 ## Start
 
 ``` bash
-# install dependencies
+# 安装依赖
 npm install
 
-# serve with hot reload at localhost:8080
+# 测试服务器运行在 localhost:8080，支持热更新
 npm run dev
 
-# build for production with minification
+# 打包产品版本，打包后的主要文件在dist目录。最终部署时，package.json和dist目录中的内容是必须的。此处可以根据需要进一步优化部署方式
 npm run build
 
 # build for production and view the bundle analyzer report
 npm run build --report
+
+# 构建并运行产品版本
+npm start
 ```
 
 ## Folder
