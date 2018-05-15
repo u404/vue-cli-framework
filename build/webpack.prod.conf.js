@@ -90,6 +90,14 @@ var webpackConfig = merge(baseWebpackConfig, {
         from: path.resolve(__dirname, '../src/static'),
         to: config.build.assetsSubDirectory,
         ignore: ['.*']
+      },
+      {
+        from: path.resolve(__dirname, '../src/server-config.js'),
+        to: ''
+      },
+      {
+        from: path.resolve(__dirname, '../src/server.js'),
+        to: ''
       }
     ])
   ]

@@ -14,14 +14,14 @@
             </ul>
             <div class="app-download">
                 <a href="#" class="icon-phone"></a>
-                <img src="/static/img/app-download.png" alt="" class="dropmenu">
+                <img src="/resources/img/app-download.png" alt="" class="dropmenu">
             </div>
             <div class="user-box">
                 <div class="login-regist-group">
                     <span class="btn btn-login">登录</span>
                     <span class="btn btn-regist">注册</span>
                 </div>
-                <div class="user-avator" style="background-image: url(/static/img/app-download.png);"></div>
+                <div class="user-avator" style="background-image: url(/resources/img/app-download.png);"></div>
             </div>
         </div>    
     </nav>
