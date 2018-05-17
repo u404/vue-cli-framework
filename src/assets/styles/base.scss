@@ -88,11 +88,39 @@ sub { bottom: -0.25em; }
 .flex {
     @include flex();
 }
+.flex-1 {
+    flex: 1 1 auto;
+}
+.flex-0 {
+    flex: 0 0 auto;
+}
+.flex-10 {
+    flex: 1 0 auto;
+}
+.flex-01 {
+    flex: 0 1 auto;
+}
 
 .text-overflow {
     @include text-overflow();
 }
-
+html {
+    height: 100%;
+}
 body {
     font-size: 14px;
+    height: 100%;
+    position: relative;
+}
+
+.page {
+    margin: 0 auto;
+    width: 1000px;
+    height: 100%;
+}
+.page-tb-wrap {
+    @include flex(column, flex-start, stretch);
+}
+.page-lr-wrap {
+    @include flex($jus: flex-start, $ali: stretch);
 }

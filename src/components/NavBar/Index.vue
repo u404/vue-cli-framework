@@ -2,31 +2,20 @@
     <nav class="nav-bar">
         <div class="container">
             <div class="logo" :style="{'background-image': 'url(' + config.logo + ')'}"></div>
-            <ul class="nav-list">
-                <li class="nav-item" :class="{ active: navIndex == activeNavIndex }" v-for="(navItem,navIndex) in config.navList" :key="navItem.name" @click="setActiveIndex(navIndex)">
-                    <router-link class="nav-link" :to="navItem.path">{{navItem.name}}</router-link>
-                    <ul class="dropmenu-list" v-if="navItem.children">
-                        <li class="dropmenu-item" v-for="dropmenuItem in navItem.children" :key="dropmenuItem.name" @click="setActiveIndex(navIndex)">
-                            <router-link class="dropmenu-link" :to="dropmenuItem.path">{{dropmenuItem.name}}</router-link>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-            <div class="app-download">
-                <a href="#" class="icon-phone"></a>
-                <img src="/resources/img/app-download.png" alt="" class="dropmenu">
-            </div>
-            <div class="user-box">
-                <div class="login-regist-group">
-                    <span class="btn btn-login">登录</span>
-                    <span class="btn btn-regist">注册</span>
-                </div>
+            <div class="user-box dropdown-menu-box">
                 <div class="user-avator" style="background-image: url(/resources/img/app-download.png);"></div>
+                <div class="user-name">用户名</div>
+                <div class="dropdown-menu">
+                    <ul class="menu-list">
+                        <li class="menu">退出登录</li>
+                    </ul>
+                </div>
             </div>
         </div>    
     </nav>
 </template>
 <script>
+    import './Index.scss';
     export default {
         data() {
             return {
@@ -42,6 +31,6 @@
     }
 </script>
 <style scoped lang="scss">
-    @import 'Index.scss';
+
 </style>
 

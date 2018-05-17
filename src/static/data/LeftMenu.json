@@ -1,0 +1,31 @@
+{
+    "logo": "/resources/img/logo.png",
+    "title": "管理中心",
+    "menuList": [
+        {
+            "name": "系统设置",
+            "children": [
+                {
+                    "name": "基础数据",
+                    "path": "/"
+                },
+                {
+                    "name": "序时帐数据",
+                    "path": "/"
+                },
+                {
+                    "name": "预算数据",
+                    "path": "/"
+                }
+            ]
+        },
+        {
+            "name": "问题清单",
+            "path": "/"
+        },
+        {
+            "name": "查询报告",
+            "path": "/"
+        }
+    ]
+}
