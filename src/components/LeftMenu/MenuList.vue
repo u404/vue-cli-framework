@@ -49,3 +49,33 @@
         }
     }
 </script>
+
+<style lang="scss" scoped>
+    .menu-list {
+        overflow: hidden;
+        .menu {
+            background: rgba(0, 0, 0, 0.2);
+            .menu-text {
+                display: block;
+                border-top: 1px solid #fff;
+                line-height: 40px;
+            }
+
+            // .menu-child {
+            //     display: none;
+            // }
+        }
+
+        .dropdown-enter, .dropdown-leave-to {
+        max-height: 0;
+        }
+        
+        .dropdown-enter-active, .dropdown-leave-active {
+            transition: max-height 0.3s ease;
+        }
+        
+        .dropdown-enter-to, .dropdown-leave {
+            max-height: 300px;
+        }
+    }
+</style>

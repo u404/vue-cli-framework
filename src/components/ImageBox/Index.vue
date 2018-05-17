@@ -5,11 +5,5 @@
 </template>
 <script>
 </script>
-<style scoped lang="scss">
-    .imagebox {
-        img {
-            display: block;
-        }
-    }
-</style>
+<style lang="scss" src="./Index.scss" scoped></style>
 

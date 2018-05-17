@@ -15,7 +15,6 @@
     </nav>
 </template>
 <script>
-    import './Index.scss';
     export default {
         data() {
             return {
@@ -30,7 +29,5 @@
         }
     }
 </script>
-<style scoped lang="scss">
-
-</style>
+<style lang="scss" src="./Index.scss" scoped></style>
 

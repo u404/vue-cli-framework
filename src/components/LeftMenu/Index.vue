@@ -7,7 +7,6 @@
     </div>
 </template>
 <script>
-    import './Index.scss';
     import MenuList from "./MenuList.vue";
     export default {
         data() {
@@ -22,6 +21,4 @@
         }
     }
 </script>
-<style scoped lang="scss">
-</style>
-
+<style lang="scss" src="./Index.scss" scoped></style>
